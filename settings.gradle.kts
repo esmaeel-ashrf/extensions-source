@@ -15,6 +15,10 @@ File(rootDir, "lib").eachDir { include("lib:${it.name}") }
 // Load all modules under /lib-multisrc
 File(rootDir, "lib-multisrc").eachDir { include("lib-multisrc:${it.name}") }
 
+// Ensure iken is explicitly included (fix for CI)
+include(":lib-multisrc:iken")
+project(":lib-multisrc:iken").projectDir = file("lib-multisrc/iken")
+
 /**
  * ======================================== HELPER FUNCTION ========================================
  */
@@ -25,6 +29,7 @@ fun loadAllIndividualExtensions() {
         }
     }
 }
+
 fun loadIndividualExtension(lang: String, name: String) {
     include("src:${lang}:${name}")
 }
