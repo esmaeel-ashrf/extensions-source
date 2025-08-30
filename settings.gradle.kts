@@ -1,8 +1,8 @@
 /**
- * Add or reove modules to load as needed for local development here.
+ * Add or remove modules to load as needed for local development here.
  */
-loadAllIndividualExtensions()
-// loadIndividualExtension("all", "mangadex")
+// loadAllIndividualExtensions()
+loadIndividualExtension("ar", "mangapro")
 
 /**
  * ===================================== COMMON CONFIGURATION ======================================
