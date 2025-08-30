@@ -1,3 +1,8 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
 ext {
     extName = 'Manga Pro'
     extClass = '.MangaPro'
@@ -7,4 +12,17 @@ ext {
     isNsfw = false
 }
 
-apply from: "$rootDir/common.gradle"
+android {
+    namespace = "eu.kanade.tachiyomi.extension.ar.mangapro"
+    compileSdk = 33
+
+    defaultConfig {
+        minSdk = 21
+        targetSdk = 33
+    }
+}
+
+dependencies {
+    // يعتمد على مكتبة iken
+    implementation project(":lib-multisrc:iken")
+}
