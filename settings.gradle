@@ -1,0 +1,4 @@
+rootProject.name = 'extensions'
+
+include ':src:ar:mangapro'
+project(':src:ar:mangapro').projectDir = file('src/ar/mangapro')
