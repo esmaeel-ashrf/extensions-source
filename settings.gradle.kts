@@ -1,9 +1,13 @@
 rootProject.name = "extensions"
 
-// include MangaPro
-include("src:ar:mangapro")
+// ==================== Core ====================
+include(":core")
+project(":core").projectDir = file("core")
+
+// ==================== MangaPro extension ====================
+include(":src:ar:mangapro")
 project(":src:ar:mangapro").projectDir = file("src/ar/mangapro")
 
-// include lib-multisrc template that MangaPro depends on
-include("lib-multisrc:iken")
+// ==================== Iken multisrc template ====================
+include(":lib-multisrc:iken")
 project(":lib-multisrc:iken").projectDir = file("lib-multisrc/iken")
