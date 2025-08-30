@@ -23,6 +23,6 @@ android {
 }
 
 dependencies {
-    // يعتمد على مكتبة iken
-    implementation project(":lib-multisrc:iken")
+    // يعتمد على مكتبة iken multisrc
+    implementation(project(":lib-multisrc:iken"))
 }
